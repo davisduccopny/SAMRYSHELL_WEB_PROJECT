@@ -859,7 +859,7 @@ $products= $productModel->showProduct();
                             <figure class="product-thumb">
                                 <a href="single-product.html"><img src="<?php
                                 $strfirt = './admin-page';
-                                 echo  $strfirt.mb_substr($product['image'], 2); ?>" alt="Products"
+                                 echo  $strfirt.substr($product['image'], 2); ?>" alt="Products"
                                                                    class="img-fluid"></a>
                             </figure>
 
