@@ -13,7 +13,7 @@ $products= $productModel->showProduct();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="meta description">
 
-    <title>Single Product :: DNX - Jewelry Store e-Commerce Bootstrap 4 Template</title>
+    <title>Tingle Product :: DNX - Jewelry Store e-Commerce Bootstrap 4 Template</title>
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"/>
 
@@ -49,7 +49,7 @@ $products= $productModel->showProduct();
 <header id="header-area" class="header__3">
     <div class="ruby-container">
         <div class="row">
-            <!-- Logo Area Start -->
+            <!-- Logo beta Start -->
             <div class="col-3 col-lg-1 col-xl-2 m-auto">
                 <a href="index.html" class="logo-area">
                     <img src="assets/img/logo-black.png" alt="Logo" class="img-fluid"/>
