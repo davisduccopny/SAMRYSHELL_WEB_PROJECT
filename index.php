@@ -140,7 +140,7 @@ $products= $productModel->showProduct();
                                                 <figure class="product-thumb">
                                                     <a href="#"><img class="img-fluid" src="<?php
                                                         $strfirt = './admin-page';
-                                                        echo  $strfirt . substr($product['image'], 2); ?>"
+                                                        echo  $strfirt .substr($product['image'], 2); ?>"
                                                                     alt="Products"/></a>
                                                 </figure>
 
