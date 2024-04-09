@@ -1,6 +1,6 @@
 <?php 
 require './admin-page/config/database.php';
-require 'admin-page/model/product_model.php';
+require './admin-page/model/product_model.php';
 require './controller/cart_controller.php';
 $productModel = new ProductModel($conn);
 $products= $productModel->showProduct();
