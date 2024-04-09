@@ -35,7 +35,7 @@ $products= $productModel->showProduct();
 
     <!-- Modernizer JS -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> -->
 
 
     <!--[if lt IE 9]>
@@ -1252,7 +1252,7 @@ $products= $productModel->showProduct();
 <script src="assets/js/vendor/bootstrap.min.js"></script>
 <!--=== Plugins Min Js ===-->
 <script src="assets/js/plugins.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
 <!--=== Active Js ===-->
 <script src="assets/js/active.js"></script>
 <script >
