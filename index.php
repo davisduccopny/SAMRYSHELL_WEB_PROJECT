@@ -1255,7 +1255,7 @@ $products= $productModel->showProduct();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <!--=== Active Js ===-->
 <script src="assets/js/active.js"></script>
-<script src="assets/js/main.js"></script>
+<!-- <script src="assets/js/main.js"></script> -->
 </body>
 
 </html>
