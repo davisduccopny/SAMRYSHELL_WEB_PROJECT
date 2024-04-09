@@ -1077,8 +1077,7 @@ $products= $productModel->showProduct();
 
 
 <!--=======================Javascript============================-->
-<script src="assets/js/main.js"></script>
-<!-- <?php require('./main/src_js.php'); ?> -->
+<!-- <script src="assets/js/main.js"></script> -->
 </body>
 
 </html>
