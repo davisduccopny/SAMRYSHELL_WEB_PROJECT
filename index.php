@@ -179,7 +179,7 @@ $products= $productModel->showProduct();
 <!--== Header Area End ==-->
 
 <!--== Search Box Area Start ==-->
-<?php require ('./main/search_box.php'); ?>
+<?php include('./main/search_box.php'); ?>
 <!--== Search Box Area End ==-->
 
 <!--== Banner // Slider Area Start ==-->
@@ -1061,13 +1061,13 @@ $products= $productModel->showProduct();
 <!--== Newsletter Area End ==-->
 
 <!-- Footer Area Start -->
-<?php require ('./main/footer.php'); ?>
+<?php include('./main/footer.php'); ?>
 <!-- Footer Area End -->
 
 
 <!-- Start All Modal Content -->
 <!--== Product Quick View Modal Area Wrap ==-->
-<?php require ('./main/model_view.php'); ?>
+<?php include('./main/model_view.php'); ?>
 <!--== Product Quick View Modal Area End ==-->
 <!-- End All Modal Content -->
 
@@ -1077,7 +1077,8 @@ $products= $productModel->showProduct();
 
 
 <!--=======================Javascript============================-->
-<!-- <script src="assets/js/main.js"></script> -->
+<script src="assets/js/main.js"></script>
+<?php include './main/src_js.php' ?>
 </body>
 
 </html>
