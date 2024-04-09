@@ -1,9 +1,9 @@
 <?php
 
-$server = "localhost";
-$user = "root";
-$password = "";
-$db = "samryshell";
+$server = "dyud5fa2qycz1o3v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$user = "ae0xbgdqcgxqyywc";
+$password = "qfudvr6re6cklso0";
+$db = "r5kbcbfwrw4kmr3z";
 
 $conn = mysqli_connect($server, $user, $password, $db);
 

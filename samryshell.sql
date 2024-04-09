@@ -25,7 +25,7 @@ DELIMITER $$
 --
 -- Thủ tục
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `createSaleAndSaleDetail_cart` (IN `email` VARCHAR(255), IN `status` VARCHAR(255), IN `payment` VARCHAR(255))   BEGIN
+CREATE  PROCEDURE `createSaleAndSaleDetail_cart` (IN `email` VARCHAR(255), IN `status` VARCHAR(255), IN `payment` VARCHAR(255))   BEGIN
     DECLARE product_id_val INT;
     DECLARE quantity_val INT;
     
@@ -55,7 +55,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `createSaleAndSaleDetail_cart` (IN `
     DELETE FROM cart WHERE email = email;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `create_quotation` (IN `email` VARCHAR(255), IN `status` VARCHAR(50), IN `created_at` DATETIME, IN `tax` DECIMAL(10,2), IN `discount` DECIMAL(10,2), IN `description` TEXT, IN `items` JSON)   BEGIN
+CREATE  PROCEDURE `create_quotation` (IN `email` VARCHAR(255), IN `status` VARCHAR(50), IN `created_at` DATETIME, IN `tax` DECIMAL(10,2), IN `discount` DECIMAL(10,2), IN `description` TEXT, IN `items` JSON)   BEGIN
     DECLARE total DECIMAL(10, 2);
     DECLARE orderrand DECIMAL(10, 2);
     DECLARE grandtotal DECIMAL(10, 2);
@@ -127,7 +127,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `create_quotation` (IN `email` VARCH
     SELECT success_flag AS success, error_message;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `create_sale` (IN `email` VARCHAR(255), IN `status` VARCHAR(50), IN `payment_type` VARCHAR(50), IN `created_at` DATETIME, IN `ship` DECIMAL(10,2), IN `tax` DECIMAL(10,2), IN `discount_id` BIGINT, IN `description` TEXT, IN `items` JSON)   BEGIN
+CREATE  PROCEDURE `create_sale` (IN `email` VARCHAR(255), IN `status` VARCHAR(50), IN `payment_type` VARCHAR(50), IN `created_at` DATETIME, IN `ship` DECIMAL(10,2), IN `tax` DECIMAL(10,2), IN `discount_id` BIGINT, IN `description` TEXT, IN `items` JSON)   BEGIN
     DECLARE total DECIMAL(10, 2);
     DECLARE orderrand DECIMAL(10, 2);
     DECLARE grandtotal DECIMAL(10, 2);
@@ -246,7 +246,7 @@ END IF;
     SELECT success_flag AS success, error_message;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `create_salereturn` (IN `reference` VARCHAR(255), IN `status` VARCHAR(50), IN `paymentstatus` VARCHAR(50), IN `paymentname` VARCHAR(50), IN `reason` TEXT, IN `product_id` BIGINT, IN `returndate` DATETIME)   BEGIN
+CREATE  PROCEDURE `create_salereturn` (IN `reference` VARCHAR(255), IN `status` VARCHAR(50), IN `paymentstatus` VARCHAR(50), IN `paymentname` VARCHAR(50), IN `reason` TEXT, IN `product_id` BIGINT, IN `returndate` DATETIME)   BEGIN
     DECLARE orderrand DECIMAL(10, 2);
     DECLARE alltotalproduct DECIMAL(10, 2);
     DECLARE success_flag BOOLEAN DEFAULT TRUE;
@@ -318,7 +318,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `create_salereturn` (IN `reference` 
     SELECT success_flag AS success, error_message;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `update_quotation` (IN `quotation_id` BIGINT, IN `email` VARCHAR(255), IN `status` VARCHAR(50), IN `created_at` DATETIME, IN `tax` DECIMAL(10,2), IN `discount` DECIMAL(10,2), IN `description` TEXT, IN `items` JSON)   BEGIN
+CREATE  PROCEDURE `update_quotation` (IN `quotation_id` BIGINT, IN `email` VARCHAR(255), IN `status` VARCHAR(50), IN `created_at` DATETIME, IN `tax` DECIMAL(10,2), IN `discount` DECIMAL(10,2), IN `description` TEXT, IN `items` JSON)   BEGIN
     DECLARE total DECIMAL(10, 2);
     DECLARE orderrand DECIMAL(10, 2);
     DECLARE grandtotal DECIMAL(10, 2);
@@ -397,7 +397,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `update_quotation` (IN `quotation_id
     SELECT success_flag AS success, error_message;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `update_sale` (IN `email` VARCHAR(255), IN `status` VARCHAR(50), IN `ship` DECIMAL(10,2), IN `tax` DECIMAL(10,2), IN `discount_id` BIGINT, IN `description` TEXT, IN `items` JSON, IN `sale_id` BIGINT)   BEGIN
+CREATE  PROCEDURE `update_sale` (IN `email` VARCHAR(255), IN `status` VARCHAR(50), IN `ship` DECIMAL(10,2), IN `tax` DECIMAL(10,2), IN `discount_id` BIGINT, IN `description` TEXT, IN `items` JSON, IN `sale_id` BIGINT)   BEGIN
     DECLARE total DECIMAL(10, 2);
     DECLARE orderrand DECIMAL(10, 2);
     DECLARE orderrand2 DECIMAL(10, 2);
@@ -571,7 +571,7 @@ DROP TEMPORARY TABLE temp_sale_products;
      
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `update_salereturn` (IN `status` VARCHAR(50), IN `paymentstatus` VARCHAR(50), IN `paymentname` VARCHAR(50), IN `reason` TEXT, IN `returndate` DATETIME, IN `return_id` BIGINT)   BEGIN
+CREATE  PROCEDURE `update_salereturn` (IN `status` VARCHAR(50), IN `paymentstatus` VARCHAR(50), IN `paymentname` VARCHAR(50), IN `reason` TEXT, IN `returndate` DATETIME, IN `return_id` BIGINT)   BEGIN
     DECLARE success_flag BOOLEAN DEFAULT TRUE;
     DECLARE error_message VARCHAR(255) DEFAULT '';
 
