@@ -7,11 +7,11 @@ $products= $productModel->showProduct();
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-<?php require_once('./main/head.php'); ?>
+<?php require('./main/head.php'); ?>
 <body>
 
 <!--== Header Area Start ==-->
-<?php require ('./main/header.php'); ?>
+<?php require('./main/header.php'); ?>
 <!--== Header Area End ==-->
 
 <!--== Search Box Area Start ==-->
